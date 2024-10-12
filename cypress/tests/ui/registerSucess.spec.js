@@ -12,8 +12,8 @@ const loginPage = new LoginPage()
 describe('Registro de novo usuário com sucesso', () => {
     it('Deve registrar um novo usuário com informações válidas', () => {
         registerPage.accessRegisterPage()
-        registerPage.registerWithAnyUser(userData.userSuccess.firstname, userData.userSuccess.lastname, userData.userSuccess.username, userData.userSuccess.password, userData.userSuccess.confirmpassword)
-        loginPage.firstLoginWithAnyUser(userData.userSuccess.username, userData.userSuccess.password)
+        registerPage.fillRegisterWithAnyUser(userData.userSuccess.firstname, userData.userSuccess.lastname, userData.userSuccess.username, userData.userSuccess.password, userData.userSuccess.confirmpassword)
+        loginPage.fillFirstLoginWithAnyUser(userData.userSuccess.username, userData.userSuccess.password, userData.userSuccess.bankname, userData.userSuccess.routingnumber, userData.userSuccess.accountnumber)
 
     })
 })
