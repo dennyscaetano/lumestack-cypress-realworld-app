@@ -6,8 +6,8 @@ describe('Login com sucesso', () => {
     it('Deve fazer login com um usuário válido', () => {
 
         loginPage.accessLoginPage()
-        loginPage.fillFirstLoginWithAnyUser(userData.userSuccess.username, userData.userSuccess.password, userData.userSuccess.bankname, userData.userSuccess.routingnumber, userData.userSuccess.accountnumber)
-        //loginPage.checkAccessSuccess()
+        loginPage.fillLoginWithRegisteredUser(userData.registeredUser.username, userData.registeredUser.password)
+        loginPage.checkAccessSuccess()
 
     })
 })
