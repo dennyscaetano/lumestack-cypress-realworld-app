@@ -16,7 +16,7 @@ class LoginPage {
         cy.visit('/signin')
     }
 
-    fillFirstLoginWithAnyUser(username, password, bankName, routingNumber, accountNumber) {
+    fillFirstLoginWithAnyUser(username, password) {
         cy.get(this.selectorsList().usernameField).type(username)
         cy.get(this.selectorsList().passwordField).type(password)
         cy.get(this.selectorsList().signInButton).click()
