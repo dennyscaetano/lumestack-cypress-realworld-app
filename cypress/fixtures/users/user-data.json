@@ -2,7 +2,7 @@
     "userSuccess": {
         "firstname": "FirstNameTest",
         "lastname": "LastNameTest",
-        "username": "usernametest11",
+        "username": "usernametest",
         "password": "s3cret",
         "confirmpassword": "s3cret",
         "bankname": "Bank Test United",

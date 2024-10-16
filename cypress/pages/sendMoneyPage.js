@@ -7,8 +7,8 @@ class SendMoneyPage {
             payButton: "[data-test='transaction-create-submit-payment']",
             requestButton: "[data-test='transaction-create-submit-request']",
             successPaidMessage: "[data-test='main']",
+            failPaidMessage: "[data-test='main']",
         }
-
         return selectors
     }
 
@@ -21,14 +21,14 @@ class SendMoneyPage {
         cy.get(this.selectorsList().amountField).type(amount)
         cy.get(this.selectorsList().descriptionField).type(description)
         cy.get(this.selectorsList().payButton).click()
-        cy.get(this.selectorsList().successPaidMessage).should('contain', 'Paid')
-
     }
 
     checkTransactionPaidSuccess() {
-        cy.get(this.selectorsList().successPaidMessage)
+        cy.get(this.selectorsList().successPaidMessage).should('contain', 'Paid')
     }
 
+    checkTransactionPaidFail() {
+        cy.get(this.selectorsList().failPaidMessage).should('contain', 'Not Paid') // Provável mensagem que deverá ser apresentada após correção
+    }
 }
-
 export default SendMoneyPage

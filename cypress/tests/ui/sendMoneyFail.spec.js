@@ -12,7 +12,7 @@ describe('Enviar dinheiro com saldo insuficiente', () => {
         loginPage.checkAccessSuccess()
         sendMoneyPage.accessNewTransaction()
         sendMoneyPage.fillNewTransactionTransfer('20000', 'Transaction test with INSUFICIENT balance')
-        sendMoneyPage.checkTransactionPaidSuccess()
+        sendMoneyPage.checkTransactionPaidFail() // Validando a apresentação de mensagem de erro, porém como ela não é apresentada, deverá ser corrigido o sistema para adequar a exigência.
         
         //registerPage.fillRegisterWithAnyUser(chance.first(), chance.last(), userData.userSuccess.username, userData.userSuccess.password, userData.userSuccess.confirmpassword, userData.userSuccess.bankname, userData.userSuccess.routingnumber, userData.userSuccess.accountnumber)
 
